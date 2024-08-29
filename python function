@@ -1,0 +1,67 @@
+# ques-1 declare a div() function with two parameters. then call the function and pass two numbers and display their division
+def div(num1, num2):
+    """
+    This function takes two numbers as input and returns their division.
+    
+    Parameters:
+    num1 (float): The dividend.
+    num2 (float): The divisor.
+    
+    Returns:
+    float: The quotient of num1 and num2.
+    """
+    return num1 / num2
+
+# Call the function with two numbers
+num1 = 10
+num2 = 2
+result = div(num1, num2)
+
+# Display the result
+print(f"The division of {num1} by {num2} is: {result}")
+
+
+# ques-2 declare a square() function with one parameter. then call the function and pass one number and display the square of that number
+def square(num):
+    """
+    This function takes a number as input and returns its square.
+    
+    Parameters:
+    num (float): The number to be squared.
+    
+    Returns:
+    float: The square of the input number.
+    """
+    return num ** 2
+
+# Call the function with a number
+num = 5
+result = square(num)
+
+# Display the result
+print(f"The square of {num} is: {result}")
+
+
+# ques-3 using max() and min() functions display the maximum and minimum of 5 random numbers
+# Define 5 random numbers
+numbers = [23, 11, 46, 75, 32]
+
+print("Numbers:", numbers)
+
+# Find the maximum and minimum values
+max_val = max(numbers)
+min_val = min(numbers)
+
+print("The maximum value is:", max_val)
+print(f"The minimum value is:", min_val)
+
+
+# ques-4 accept a name from the user and display that in lower case using lower() function
+# Get the user's name
+name = input("Please enter your name: ")
+
+# Convert the name to lower case
+lower_case_name = name.lower()
+
+# Display the lower case name
+print("Your name in lower case is:", lower_case_name)
