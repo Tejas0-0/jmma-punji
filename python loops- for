@@ -1,0 +1,84 @@
+# ques-1 print the first 10 natural numbers using for loop
+for i in range(1, 11):
+    print(i)
+
+
+# ques-2 python program to check if the given string is a palindrome
+def is_palindrome(s):
+    return s == s[::-1]
+
+string = input("Enter a string: ")
+if is_palindrome(string):
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
+
+
+# ques-3 python program to check if a given number is an Armstrong number
+num = int(input("Enter a number: "))
+if num == sum(int(d) ** len(str(num)) for d in str(num)):
+    print("Armstrong number")
+else:
+    print("Not an Armstrong number")
+
+
+# ques-4 Python program to get the fibonacci series between 0 to 50
+a, b = 0, 1
+while a <= 50:
+    print(a, end=' ')
+    a, b = b, a + b
+
+
+# ques-5 pyhton program to check the validity of password input by users
+def validate_password(password):
+    # Check password length
+    if len(password) < 8:
+        return False, "Password must be at least 8 characters long"
+
+    # Initialize variables to track the presence of required characters
+    has_upper = False
+    has_lower = False
+    has_digit = False
+    has_special = False
+
+    # Iterate through each character in the password
+    for char in password:
+        # Check for uppercase letter
+        if char.isupper():
+            has_upper = True
+
+        # Check for lowercase letter
+        elif char.islower():
+            has_lower = True
+
+        # Check for digit
+        elif char.isdigit():
+            has_digit = True
+
+        # Check for special character
+        elif char in "!@#$%^&*()_+=-{};:'<>,./?":
+            has_special = True
+
+    # Check if all required characters are present
+    if not has_upper:
+        return False, "Password must contain at least one uppercase letter"
+
+    if not has_lower:
+        return False, "Password must contain at least one lowercase letter"
+
+    if not has_digit:
+        return False, "Password must contain at least one digit"
+
+    if not has_special:
+        return False, "Password must contain at least one special character"
+
+    return True, "Password is valid"
+
+password = input("Enter a password: ")
+
+valid, message = validate_password(password)
+
+if valid:
+    print("Password is valid")
+else:
+    print("Error:", message)
