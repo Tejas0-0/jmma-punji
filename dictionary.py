@@ -1,0 +1,74 @@
+# ques-1  Write a Python program and calculate the mean of the below dictionary. test_dict = {"A" : 6, "B" : 9, "C" : 5, "D" : 7, "E" : 4} 
+      #   Output: 6.2 
+test_dict = {"A" : 6, "B" : 9, "C" : 5, "D" : 7, "E" : 4}
+
+# Calculate the mean
+mean = sum(test_dict.values()) / len(test_dict)
+
+print("Mean:", mean)
+
+
+""" ques-2 Write a Python script to concatenate the following dictionaries to create a new one. 
+Sample Dictionary : 
+dic1={1:10, 2:20} 
+dic2={3:30, 4:40} 
+dic3={5:50,6:60} 
+
+Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60} """
+
+dic1 = {1:10, 2:20}
+dic2 = {3:30, 4:40}
+dic3 = {5:50,6:60}
+
+# Concatenate the dictionaries using the update() method
+new_dict = {}
+new_dict.update(dic1)
+new_dict.update(dic2)
+new_dict.update(dic3)
+
+print("Concatenated dictionary:", new_dict)
+
+
+"""ques-3 Write a Python program to get the key, value and item in a dictionary. 
+
+input:dict_num = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60} 
+Output:
+key     values
+1          10
+2          20
+3          30
+4          40
+5          50
+6          60 """
+
+dict_num = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+# Print the header
+print("key     values")
+
+# Iterate over the dictionary items
+for key, value in dict_num.items():
+    print(f"{key}          {value}")
+
+
+
+"""ques-4Write a Python program to get the key, value and item in a dictionary. 
+
+Input: input_dict = {1: 10, 2: 20, 3:None, 4: 40, 5: None, 6: 60} 
+
+Output:
+Dictionary with Empty Items Dropped:
+{1:10, 2:20, 4:40, 6:60}"""
+
+input_dict = {1: 10, 2: 20, 3:None, 4: 40, 5: None, 6: 60}
+
+# Create a new dictionary with empty items dropped
+new_dict = {}
+for key, value in input_dict.items():
+    if value is not None:
+        new_dict[key] = value
+
+print("Dictionary with Empty Items Dropped:")
+print(new_dict)
+
+
+
